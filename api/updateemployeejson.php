@@ -1,6 +1,21 @@
+<!--Purely a PHP File-->
 <?php
 
+	//############################################################################
+	//
+	// PHP Crude CRUD
+	//
+	// Name: updateemployeejson.php
+	//
+	// Author: Joe Axberg
+	// Created: Sometime in 2021
+	// 
+	// Note: It has JSON in the title, but has nothing to do with JSON right now
+	// 
+	//##########################################################################
+
     //access credentials fils
+	//super insecure, but for this app, not worried about that...yet
     include 'credentials.php';
 		
 	//this is the php object oriented style of creating a mysql connection
