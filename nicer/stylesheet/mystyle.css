@@ -1,0 +1,32 @@
+body {
+    background-color: darkslategray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:antiquewhite;
+
+}
+
+h2 {
+
+    color:lightgray;
+    font-weight: bold;
+    
+}
+
+h3 {
+
+    color:lightgray;
+    font-weight: bold;
+    
+}
+
+a {
+
+    color:antiquewhite;
+}
+
+a:visited {
+
+    color:antiquewhite;
+    
+}
+
