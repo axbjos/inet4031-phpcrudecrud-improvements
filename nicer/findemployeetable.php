@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Find Employee</title>
+		<title>Employee Management System v2.0</title>
 	
 		<!-- a little snippet of Cascading Style Sheet style of formatting for the data table -->
 		<!-- create a 1 pixel border, with a collapsed single border -->
@@ -16,7 +16,7 @@
 	</head>
 
 	<body>
-		<h2>Find an Employee Record</h2>
+		<div id=title_bar><h2>Employee Management System v2.0</h2></div>
 		<hr>
 		<?php
             //access credentials fils

@@ -7,7 +7,7 @@
 	</head>
 
 	<body>
-		<h2>Find an Employee Record</h2>
+		<div id=title_bar><h2>Employee Management System v2.0</h2></div>
 		<hr>
 		<?php
 
