@@ -22,9 +22,15 @@ h3 {
 
     color:lightgray;
     font-weight: bold;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     
+}
+
+h4 {
+
+    padding-top: 10px;
+    padding-bottom: 1px;
 }
 
 a {
