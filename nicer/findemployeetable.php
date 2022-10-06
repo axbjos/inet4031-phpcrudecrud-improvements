@@ -65,5 +65,9 @@
 			$conn->close();
 		
 		?>
+		<br />
+		<br />
+		<br />
+		<footer id="axnet_footer">2022 AxnetLabs, LLC</footer>
 	</body>
 </html>

@@ -2,6 +2,8 @@ body {
     background-color: darkslategray;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color:antiquewhite;
+    margin-left:3%;
+    margin-right: 3%;
 
 }
 
@@ -9,6 +11,7 @@ h2 {
 
     color:lightgray;
     font-weight: bold;
+    background-color:slategray;
     
 }
 
@@ -27,6 +30,15 @@ a {
 a:visited {
 
     color:antiquewhite;
+    
+}
+
+#axnet_footer {
+
+    text-decoration: overline;
+    position: absolute;
+    bottom: 5%;
+    width: 100%
     
 }
 
