@@ -1,0 +1,96 @@
+body {
+    background-color: darkslategray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:antiquewhite;
+    margin-left:3%;
+    margin-right: 3%;
+
+}
+
+#txtHint {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:antiquewhite;
+}
+
+h2 {
+
+    background-color:slategray;
+    text-align:center;
+    color:lightgray;
+    font-weight: bold;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+
+h3 {
+
+    color:lightgray;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+h4 {
+
+    padding-top: 10px;
+    padding-bottom: 1px;
+}
+
+a {
+    color:antiquewhite;
+}
+
+a:visited {
+
+    color:antiquewhite;
+    
+}
+
+#axnet_footer {
+
+    text-decoration: overline;
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    text-align:center;
+    padding-bottom: 25px;
+    
+}
+
+#main_menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: slategray;
+    border: 1px solid #555;
+    overflow: hidden;
+    width:fit-content;
+  }
+
+  #main_menu li {
+
+    float: left;
+
+  }
+
+  #main_menu li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    text-align:center;
+    border: 1px solid #555;
+  }
+
+  #main_menu li a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  #main_menu li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
