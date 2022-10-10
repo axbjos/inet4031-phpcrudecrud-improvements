@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Employee Management System v2.0</title>
+    <link rel="stylesheet" href="./stylesheet/mystyle.css">
+  </head>
+
+  <body>
+    <div id=title_bar><h2>Employee Management System v2.0</h2></div>
+    <hr></hr>
+    <h3>Search Employee Records</h3>
+    <hr></hr> <!-- This is the hr tag, or "horizonatal reference" -->
+
+    <p>Search the employees table in the MySQL Database</p>
+    <p>Form data input here will be sent to a PHP Page via a URL parameter (look at the URL after hitting Submit)</p>
+    <p>The PHP generated page will run the database query</p>
+    <p>Employee "Weedman" is pre-populated as an example</p>
+    <p>Data in this query will be returned as a plain-text list</p>
+    <h4>Return as Plain Text</h4>
+    <form action="findemployee.php">
+      Last name:<br>
+      <input type="text" name="lastname" value="Weedman">
+      <br /><br />
+      <input type="submit" value="Submit">
+    </form>
+    <br />
+    <hr></hr> <!-- This is the hr tag, or "horizonatal reference" -->
+    <p>Form data input here will be sent to a PHP Page via a URL parameter (look at the URL after hitting Submit)</p>
+    <p>Data in this query will be returned in an HTML Table</p>
+    <h4>Return in an HTML Table</h4>
+    <form action="findemployeetable.php">
+      Last name:<br>
+      <input type="text" name="lastname" value="Weedman">
+      <br/><br/>
+      <input type="submit" value="Submit">
+    </form>	
+    <br/>
+    <br/>
+    <button onclick=window.location.href='index.html'>Home</button> <!--Use a Javascript onclick to send the user to home page-->
+    &nbsp<--JavaScript onclick
+    <br/><br/>
+    <a href="index.html" title="Home" target="_parent">Home Page</a> <!--Use a simple URL Hyperlink-->
+    &nbsp<--Simple hyperlink
+    <br/>
+    <br/>
+    <br/>
+    <footer id="axnet_footer">2022 AxnetLabs, LLC</footer>
+  </body>
+
+</html>
