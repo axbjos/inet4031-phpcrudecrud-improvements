@@ -10,20 +10,12 @@
 	<body>
 		<!-- title bar-->
 		<h2>Employee Management System v2.0</h2>
-		<!-- navigation bar
-		<ul id="main_menu">
-			<li><a class="active">Select an Operation:</a></li>
-			<li><a href="addemployee.html">Add Employee Record</a></li>
-			<li><a href="findemployeeajax2.html">Search Employee Record</a></li>
-			<li><a href="updateemployee.html">Update Employee Record</a></li>
-			<li><a href="deleteemployee.html">Delete Employee Record</a></li>
-		</ul> -->
 		<h3>Data-Driven Dynamic HTML Application</h3>
 		<hr>
 		<br />
 		<h4>Please login:</h4>
 		<br />
-		<form action="login.php">
+		<form action="main.php">
 			Username:
 			<br />
 			<input type="text" name="username" value="">
@@ -31,22 +23,13 @@
 			<br />
 			Password:
 			<br />
-			<input type="text" name="password">
+			<input type="password" name="password">
 			<br />
 			<br />
 			<input type="submit" value="Submit">
 		  </form>
 		<br />
 		<br />
-		<?php
-
-    		session_start();
-    		$sess_val = session_id();
-    		echo $sess_val;
-			in
-
-
-		?>
 		  This application is implemented on a classic LAMP Stack:
 		<ul>
 			<li>Ubuntu Linux 20.04</li>

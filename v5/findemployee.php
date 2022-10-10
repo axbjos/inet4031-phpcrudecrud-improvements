@@ -1,63 +1,62 @@
+<?php
+	define('__CONFIG__',true);
+	require_once "inc/config.php";
+?>
+
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Employee Management System v2.0</title>
-		<link rel="stylesheet" href="./stylesheet/mystyle.css">
-	</head>
-
-	<body>
-		<div id=title_bar><h2>Employee Management System v2.0</h2></div>
-		<hr>
-		<?php
-
-		//access credentials fils
-		include 'credentials.php';
-
-		//this is the php object oriented style of creating a mysql connection
-		$conn = new mysqli($servername, $username, $password, $dbname);  
-		
-		//check for connection success
-		if ($conn->connect_error) {
-			die("<h4>MySQL Connection Failed</h4><br>" . $conn->connect_error);
-		}
-		echo "<h4>MySQL Connection Succeeded</h4><hr></hr>";
-			
-		//pull the attribute that was passed with the html form GET request and put into a local variable.
-		$lastname = $_GET["lastname"];
-
-		echo "<br />Searching for: " . $lastname;
-		
-		echo "<br><br>";
-			
-		//create the SQL select statement, notice the funky string concat at the end to variablize the query
-		//based on using the GET attribute
-		$sql = "SELECT first_name,last_name FROM employees where last_name = '".$lastname."'";
-		
-		//put the resultset into a variable, again object oriented way of doing things here
-		$result = $conn->query($sql);
-		
-		//if there were no records found say so, otherwise create a while loop that loops through all rows
-		//and echos each line to the screen. You do this by creating some crazy looking echo statements
-		// in the form of HTMLText . row[column] . HTMLText . row[column].   etc...
-		// the dot "." is PHP's string concatenator operator
-		if ($result->num_rows > 0){
-			//print rows
-			while($row = $result->fetch_assoc()){
-				echo "Employee: " . $row["first_name"]. " " . $row["last_name"]. "<br>";
-			}
-		} else {
-			echo "No Records Found";
-		}
-			
-		//always close the DB connections, don't leave 'em hanging
-		$conn->close();
-			
+    <head>
+        <meta charset="utf-8">
+        <title>Employee Management System v2.0</title>
+        <link rel="stylesheet" href="./stylesheet/mystyle.css">
+        <script>
+        function showUser(str) {
+            if (str == "") {
+                document.getElementById("txtHint").innerHTML = "";
+                return;
+            } else { 
+                if (window.XMLHttpRequest) {
+                    // code for IE7+, Firefox, Chrome, Opera, Safari
+                    xmlhttp = new XMLHttpRequest();
+                } else {
+                    // code for IE6, IE5
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("txtHint").innerHTML = this.responseText;
+                    }
+                };
+                xmlhttp.open("GET","findemployeeajax.php?emp_id="+str,true);
+                xmlhttp.send();
+            }
+        }
+        </script>
+    </head>
+    
+    <!-- Body of the HTML Doc -->
+    <body>
+        <?php 
+			require_once("common/titlenavbar.php");
 		?>
+        <h3>Search Employee Records</h3>
+        <hr></hr>
+        <br />
+            <!-- Simple Form -->
+            <form action="updateemployeeback.php">
+                Search by Employee ID Number
+                <br/>
+                <br/>
+                <input type="text" name="emp_id" id="emp_id" value="499999">
+                <br><br>
+                <input type="button" value="Retrieve Record" onclick=showUser(emp_id.value)>
+                <input type="submit" value="Update this Record?">
+            </form>
 
-		<br />
-		<br />
-		<br />
-		<footer id="axnet_footer">2022 AxnetLabs, LLC</footer>
-	</body>
+        <h4>Results Table:</h4>
+        <br />
+        <div id="txtHint"></div>
+        <br /><br />
+        <footer id="axnet_footer">2022 AxnetLabs, LLC</footer>
+    </body>
 </html>
