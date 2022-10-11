@@ -1,10 +1,16 @@
-<!-- This page is for testing login functionality -->
+<?php
+	define('__CONFIG__',true);
+	require_once "inc/config.php";
+?>
+
+<!-- Login page -->
 <!doctype html>
 <html>
 	<head>
 		<meta charset="utf-8">
 		<title>Employee Management System v4.0</title>
 		<link rel="stylesheet" href="./stylesheet/mystyle.css">
+		<script src="assets/js/login.js"></script>
 	</head>
 <!-- Body -->
 	<body>
@@ -26,9 +32,10 @@
 			<input type="password" name="password">
 			<br />
 			<br />
-			<input type="submit" value="Submit">
+			<input type="button" value="Login" onclick=checkUser(username.value,password.value)>
 		  </form>
 		<br />
+		User ID:<div id="txtHint"></div>
 		<br />
 		  This application is implemented on a classic LAMP Stack:
 		<ul>

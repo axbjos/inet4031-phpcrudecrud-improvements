@@ -7,10 +7,20 @@
         exit("Site Not Working - Contact Tech Support");
     }
 
-    //DB credentials section
-    $servername = "localhost";      //mysql is on the same host as apache
-    $dbname = "employees";          //which db you're going to use
-    $username = "phpuser1";
-    $password = "abc123";
+    //include the database class files
+    //one for connection to the users db
+    //one for connection to the employee db
+    include_once "classes/user_database.php";
+    include_once "classes/emp_database.php";
+
+    //then instantiate a new db connections using the getConnection function in the database class.
+    $user_con = user_database::getConnection();
+    $emp_con = emp_database::getConnection();
+
+    //OLD DB credentials section when using mysqli
+    //$servername = "localhost";      //mysql is on the same host as apache
+    //$dbname = "employees";          //which db you're going to use
+    //$username = "phpuser1";
+    //$password = "abc123";
 
 ?>
