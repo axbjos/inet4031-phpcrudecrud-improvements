@@ -16,7 +16,7 @@
 		<?php 
 			require_once("common/titlenavbar.php");
 		?>
-		<h3>Data-Driven Dynamic HTML Application</h3>
+		<h3>Data-Driven Dynamic Web Application</h3>
 		<hr>
 		<br/>
 		This application is implemented on a classic LAMP Stack:

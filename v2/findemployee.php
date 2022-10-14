@@ -8,12 +8,13 @@
 <body>
 	<h2>Find an Employee Record</h2>
 	<hr>
+	{{{somesort of connection to some code goes here}}}
 	<?php
 
-                //access credentials fils
-                include 'credentials.php';
+        //access credentials file
+        include 'credentials.php';
 
-                //this is the php object oriented style of creating a mysql connection
+        //this is the php object oriented style of creating a mysql connection
 		$conn = new mysqli($servername, $username, $password, $dbname);  
 	
 		//check for connection success
