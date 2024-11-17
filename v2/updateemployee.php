@@ -8,7 +8,7 @@
 	</head>
 
 	<body>
-		<div id=title_bar><h2>Employee Management System v3.0</h2></div>
+		<div id=title_bar><h2>Employee Management System v2.0</h2></div>
 		<hr>
 		<h3>Update an Employee Record</h3>
 		<hr>
