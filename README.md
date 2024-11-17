@@ -1,4 +1,6 @@
-# Nicer Looking Versions of the PHP Crude CRUD App
+# PHP Crude CRUD Improvement Examples
+
+## Nicer Looking Versions of the PHP Crude CRUD App
 
 ## Demonstrates a basic Dynamic HTML Application using PHP
 
