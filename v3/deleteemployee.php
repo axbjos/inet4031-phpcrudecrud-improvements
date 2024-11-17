@@ -21,7 +21,7 @@
     <hr> <!-- This is the hr tag, or "horizonatal reference" -->
     <br>
 <?php
-                //access credentials fils
+        //access credentials fils
 		include 'credentials.php';
 	
 		//this is the php object oriented style of creating a mysql connection

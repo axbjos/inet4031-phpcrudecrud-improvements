@@ -1,7 +1,7 @@
 <?php
 
-	define('__CONFIG__',true);
-	require_once "inc/config.php";
+	//access credentials fils
+	include 'credentials.php';
     
 	//this is the php object oriented style of creating a mysql connection
 	$conn = new mysqli($servername, $username, $password, $dbname);  
