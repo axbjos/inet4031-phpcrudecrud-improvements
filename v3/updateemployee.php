@@ -3,13 +3,13 @@
 	<head>
 		<meta charset="utf-8">
 		<meta charset="utf-8">
-		<title>Employee Management System v2.0</title>
+		<title>Employee Management System v3.0</title>
 		<link rel="stylesheet" href="./stylesheet/mystyle.css">
 	</head>
 
 	<body>
 		<!-- title bar-->
-		<h2>Employee Management System v2.0</h2>
+		<h2>Employee Management System v3.0</h2>
 		<!-- navigation bar -->
 		<ul id="main_menu">
 			<li><a class="active" href="index.html">Home</a></li>
@@ -101,6 +101,6 @@
 		?>
 		<br />
 		<br />
-		<footer id="axnet_footer">2022 AxnetLabs, LLC</footer>
+		<footer id="axnet_footer">2024 AxnetLabs, LLC</footer>
 	</body>
 </html>

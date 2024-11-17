@@ -2,12 +2,12 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Employee Management System v2.0</title>
+		<title>Employee Management System v3.0</title>
 		<link rel="stylesheet" href="./stylesheet/mystyle.css">
 	</head>
 
 	<body>
-		<div id=title_bar><h2>Employee Management System v2.0</h2></div>
+		<div id=title_bar><h2>Employee Management System v3.0</h2></div>
 		<hr>
 		<?php
 
@@ -58,6 +58,6 @@
 		<br />
 		<br />
 		<br />
-		<footer id="axnet_footer">2022 AxnetLabs, LLC</footer>
+		<footer id="axnet_footer">2024 AxnetLabs, LLC</footer>
 	</body>
 </html>
