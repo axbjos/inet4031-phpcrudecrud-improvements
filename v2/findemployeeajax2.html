@@ -1,40 +1,54 @@
+<!doctype html>
 <html>
-<head>
-<script>
-function showUser(str) {
-    if (str == "") {
-        document.getElementById("txtHint").innerHTML = "";
-        return;
-    } else { 
-        if (window.XMLHttpRequest) {
-            // code for IE7+, Firefox, Chrome, Opera, Safari
-            xmlhttp = new XMLHttpRequest();
-        } else {
-            // code for IE6, IE5
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("txtHint").innerHTML = this.responseText;
+    <head>
+        <meta charset="utf-8">
+        <title>Employee Management System v2.0</title>
+        <link rel="stylesheet" href="./stylesheet/mystyle.css">
+        <script>
+        function showUser(str) {
+            if (str == "") {
+                document.getElementById("txtHint").innerHTML = "";
+                return;
+            } else { 
+                if (window.XMLHttpRequest) {
+                    // code for IE7+, Firefox, Chrome, Opera, Safari
+                    xmlhttp = new XMLHttpRequest();
+                } else {
+                    // code for IE6, IE5
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("txtHint").innerHTML = this.responseText;
+                    }
+                };
+                xmlhttp.open("GET","findemployeeajax.php?lastname="+str,true);
+                xmlhttp.send();
             }
-        };
-        xmlhttp.open("GET","findemployeeajax.php?lastname="+str,true);
-        xmlhttp.send();
-    }
-}
-</script>
-</head>
-<body>
-<h2>AJAX Example Find Example With Hints</h2>
-<form>
-Last name:
-  <br>
-  <input type="text" name="lastname" value="" onkeyup="showUser(this.value)">
-  <br><br>
-  <input type="submit" value="Submit">
-</form>
-<br>
-<div id="txtHint"><b>Person info will be listed here...</b></div>
+        }
+        </script>
+    </head>
+    
+    <!-- Body of the HTML Doc -->
+    <body>
+        <div id=title_bar><h2>Employee Management System v2.0</h2></div>
+        <hr></hr>
+        <h3>Search Employee Records</h3>
+        <hr></hr>
+        <br />
+            <!-- Simple Form -->
+            <form>
+                Last name:
+                <br>
+                <input type="text" name="lastname" value="" onkeyup="showUser(this.value)">
+                <br><br>
+                <input type="submit" value="Submit">
+            </form>
 
-</body>
+        <h4>Results:</h4>
+        <br />
+        <div id="txtHint"><b>Here is the DIV tag with the id "txtHint" where queries will be displayed.</b></div>
+        <br /><br />
+        <footer id="axnet_footer">2022 AxnetLabs, LLC</footer>
+    </body>
 </html>

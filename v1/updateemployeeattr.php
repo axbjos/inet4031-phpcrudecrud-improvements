@@ -1,25 +1,18 @@
-<?php
-	define('__CONFIG__',true);
-	require_once "inc/config.php";
-?>
-
 <!doctype html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Employee Management System v2.0</title>
-	<link rel="stylesheet" href="./stylesheet/mystyle.css">
+<meta charset="utf-8">
+<title>Find Employee</title>
 </head>
 
 <body>
-	<?php 
-		require_once("common/titlenavbar.php");
-	?>
-	<h3>Update Record Status</h3>
+	<h2>Employee Updated</h2>
 	<hr>
-	<br />
-		<?php
+<?php
 
+                //access credentials fils
+                include 'credentials.php';
+		
 		//this is the php object oriented style of creating a mysql connection
 		$conn = new mysqli($servername, $username, $password, $dbname);  
 	
@@ -32,7 +25,7 @@
 		//pull the attribute that was passed with the html form GET request and put into a local variable.
 		$emp_attr = $_GET["emp_attr"]; // "birth_date"
 		$new_val = $_GET["new_val"];   // "1979-05-12"
-        $emp_no = $_GET["emp_no"];     // 500000
+                $emp_no = $_GET["emp_no"];     // 500000
 
 		//echo $emp_attr;
 		//echo $new_val;
@@ -49,7 +42,7 @@
 		//run the update
                 if ($conn->query($sql) === TRUE){
 
-                        echo "Employee Update Completed";
+                        echo "Update Completed";
 
                 } else {
 
@@ -60,10 +53,8 @@
 		//always close the DB connections, don't leave open 
 		$conn->close();
 		
-	?>
-	<br />
-	<br />
-	<br />
-<footer id="axnet_footer">2022 AxnetLabs, LLC</footer>
+?>
+<br><br>
+<a href="index.html" title="Home" target="_parent">Home Page</a>
 </body>
 </html>

@@ -1,15 +1,25 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Find Employee</title>
+	<meta charset="utf-8">
+	<title>Employee Management System v2.0</title>
+	<link rel="stylesheet" href="./stylesheet/mystyle.css">
 </head>
 
 <body>
-	<div id=title_bar><h2>Employee Management System v2.0</h2></div>
-	<hr></hr>
-	<h3>Employee Updated</h3>
+	<!-- title bar-->
+	<h2>Employee Management System v2.0</h2>
+	<!-- navigation bar -->
+	<ul id="main_menu">
+		<li><a class="active" href="index.html">Home</a></li>
+		<li><a href="addemployee.html">Add Employee Record</a></li>
+		<li><a href="findemployeeajax2.html">Search Employee Record</a></li>
+		<li><a href="updateemployee.html">Update Employee Record</a></li>
+		<li><a href="deleteemployee.html">Delete Employee Record</a></li>
+	</ul>
+	<h3>Update Record Status</h3>
 	<hr>
+	<br />
 		<?php
         //access credentials fils
         include 'credentials.php';
@@ -26,7 +36,7 @@
 		//pull the attribute that was passed with the html form GET request and put into a local variable.
 		$emp_attr = $_GET["emp_attr"]; // "birth_date"
 		$new_val = $_GET["new_val"];   // "1979-05-12"
-                $emp_no = $_GET["emp_no"];     // 500000
+        $emp_no = $_GET["emp_no"];     // 500000
 
 		//echo $emp_attr;
 		//echo $new_val;
@@ -43,7 +53,7 @@
 		//run the update
                 if ($conn->query($sql) === TRUE){
 
-                        echo "Update Completed";
+                        echo "Employee Update Completed";
 
                 } else {
 
@@ -54,8 +64,10 @@
 		//always close the DB connections, don't leave open 
 		$conn->close();
 		
-?>
-<br><br>
-<a href="index.html" title="Home" target="_parent">Home Page</a>
+	?>
+	<br />
+	<br />
+	<br />
+<footer id="axnet_footer">2022 AxnetLabs, LLC</footer>
 </body>
 </html>

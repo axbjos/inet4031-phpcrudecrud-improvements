@@ -20,7 +20,7 @@
 <!-- Body -->
 	<body>
 		<!-- title bar-->
-		<h2>Employee Management System v5.0</h2>
+		<h2>Employee Management System v4.0</h2>
 		<h3>Data-Driven Dynamic Web Application</h3>
 		<hr>
 		<br />
@@ -70,7 +70,7 @@
 		<br />
 		  This application is implemented on a classic LAMP Stack:
 		<ul>
-			<li>Ubuntu Linux 20.04</li>
+			<li>Ubuntu Linux 24.04</li>
 			<li>Apache 2 Web Server</li>
 			<li>MariaDB distribution of MySQL</li>
 			<li>PHP Programming Language</li>

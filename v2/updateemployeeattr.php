@@ -6,12 +6,13 @@
 </head>
 
 <body>
-	<h2>Employee Updated</h2>
+	<div id=title_bar><h2>Employee Management System v2.0</h2></div>
+	<hr></hr>
+	<h3>Employee Updated</h3>
 	<hr>
-<?php
-
-                //access credentials fils
-                include 'credentials.php';
+		<?php
+        //access credentials fils
+        include 'credentials.php';
 		
 		//this is the php object oriented style of creating a mysql connection
 		$conn = new mysqli($servername, $username, $password, $dbname);  

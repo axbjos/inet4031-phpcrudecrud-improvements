@@ -2,16 +2,15 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Employee Management System v2.0</title>
-<link rel="stylesheet" href="./stylesheet/mystyle.css">
+<title>Add Employee</title>
 </head>
 
 <body>
 	<h2>Add an Employee Record</h2>
 	<br><br>
 	<?php
-        //access credentials fils
-        include 'credentials.php';
+                //access credentials fils
+                include 'credentials.php';
 
 		//this is the php object oriented style of creating a mysql connection
 		$conn = new mysqli($servername, $username, $password, $dbname);  
@@ -20,7 +19,7 @@
 		if ($conn->connect_error) {
 			die("MySQL Connection Failed: " . $conn->connect_error);
 		}
-		echo "<h4>MySQL Connection Succeeded</h4>";
+		echo "MySQL Connection Succeeded<br><br>";
 		
 		//pull the attribute that was passed with the html form GET request and put into a local variable.
 		$last_name = $_GET["last_name"];
